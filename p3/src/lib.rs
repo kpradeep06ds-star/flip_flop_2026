@@ -1,3 +1,3 @@
 pub mod part_a;
-// pub mod part_b;
-// pub mod part_c;
+pub mod part_b;
+pub mod part_c;
