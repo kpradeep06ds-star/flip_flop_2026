@@ -1,20 +1,11 @@
+# Ignore all text files everywhere
 *.txt
-# Compiled output
-/target/
-target/
-# Cargo lock file - only ignore if you're building a library
-# (keep it committed for binaries/applications)
-# Cargo.lock
 
-# Backup files
-**/*.rs.bk
+# Ignore Rust compilation artifacts everywhere
+**/target/
+**/Cargo.lock
 
-# MSVC debug files
-*.pdb
-
-# Environment/editor files (optional but common)
-.env
+# Ignore specific IDE/system noise
 .vscode/
-.idea/
-*.swp
 .DS_Store
+*.swp
