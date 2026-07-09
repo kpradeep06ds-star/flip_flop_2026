@@ -1,14 +1,10 @@
 use fancy_regex::Regex;
 use std::{cmp::max};
 // find a 7 and don't find any other number
-pub fn one_digit_7(text:String) -> bool{
-    let re1 = Regex::new(r"[012345689]+").unwrap();
+pub fn one_digit_7(text: String) -> bool {
+    let re1 = Regex::new(r"[012345689]").unwrap();
     let re2 = Regex::new(r"7").unwrap();
-    if !re1.is_match(&text).unwrap() && re2.find_iter(&text).count()==1{
-        true
-    } else{
-        false
-    }
+    !re1.is_match(&text).unwrap() && re2.is_match(&text).unwrap()
 }
 
 pub fn repeats(text:String) -> i32{
@@ -27,7 +23,7 @@ pub fn repeats(text:String) -> i32{
 }
 
 pub fn red_blue_green(text:String) -> bool{
-    let re = Regex::new(r"(?i)blue|red|green").unwrap();
+    let re = Regex::new(r"blue|red|green").unwrap();
     re.is_match(&text).unwrap()
 }
 
