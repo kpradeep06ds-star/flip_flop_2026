@@ -14,6 +14,7 @@ pub fn swap_branches(text: String) -> i32 {
     
     let mut v: Vec<String> = text.lines().map(|c| c.to_string()).collect();
     v.reverse(); 
+    let vclone = v.clone();
 
     let mut i = 1;
     let mut j = 0;
@@ -42,7 +43,7 @@ pub fn swap_branches(text: String) -> i32 {
                 continue;
             }
 
-            println!("{:?} {:?}", h1, h2);
+            // println!("{:?} {:?}", h1, h2);
 
             if (h1 == "LL" && h2 == "LR") || (h1 == "LR" && h2 == "LL") {
                 ans += 1;
