@@ -18,7 +18,7 @@ fn simulate_one_worker(leaves: &mut Vec<Leaf>) -> bool {
     // the moment there is no starting point we need to stop the iteration
     // this should be used in while loop as stopping condition
     // Also always note leaves is a struct so it will have boolean and a vector embded
-    let mut current_idx = match leaves.iter().position(|l| !l.is_broken) {
+    let  current_idx = match leaves.iter().position(|l| !l.is_broken) {
         Some(idx) => idx,
         None => return false, // No leaves left at all!
     };

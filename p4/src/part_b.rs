@@ -14,7 +14,7 @@ pub fn swap_branches(text: String) -> i32 {
     
     let mut v: Vec<String> = text.lines().map(|c| c.to_string()).collect();
     v.reverse(); 
-    let vclone = v.clone();
+    // let vclone = v.clone();
 
     let mut i = 1;
     let mut j = 0;
